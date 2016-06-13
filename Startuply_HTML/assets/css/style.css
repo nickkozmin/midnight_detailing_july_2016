@@ -419,7 +419,7 @@ input[type=password],
 .fixed-menu .navigation-header.white-dropdown .navigation-bar.navigation-bar-left > li.active:not(.featured) > a,
 .navigation-header.white-header .btn.btn-outline,
 .form-register.form-register-small .form-control {
-	border-color: #1ac6ff;
+	border-color: #5b2883;
 }
 
 .base-clr-bg,
@@ -506,7 +506,7 @@ input[type=submit]:not(.default).btn-outline-color.pressed,
 .color-landing-page .newsletter-section,
 .color-landing-page .feedback-section,
 .color-landing-page .footer {
-	background-color: #1ac6ff;
+	background-color: #5b2883;
 }
 
 .base-clr-txt,
@@ -611,17 +611,17 @@ input[type=submit]:not(.default).btn-no-border.pressed,
 .package-column.featured > .package-detail .btn.btn-outline-color:hover,
 .package-column:hover > .package-detail .btn.btn-outline-color:focus,
 .package-column.featured > .package-detail .btn.btn-outline-color:focus {
-	color: #1ac6ff;
+	color: #5b2883
 }
 
 ::selection {
 	color: #ffffff;
-	background-color: #1ac6ff;
+	background-color: #5b2883;
 }
 
 ::-moz-selection {
 	color: #ffffff;
-	background-color: #1ac6ff;
+	background-color: #5b2883;
 }
 
 .bg-low-poly,
@@ -805,7 +805,7 @@ blockquote:after {
 }
 
 .style-switcher .template-set-color .color.blue {
-	background-color: #1ac6ff;
+	background-color: #5b2883;
 }
 
 .style-switcher .template-set-color .color.berry {
@@ -5472,18 +5472,12 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 }
 
 .static-header.clickthrough-version {
-	background-image: url("../img/background/golden-gate-bridge.jpg");
+	background-image: url("../img/background/pexels-photo.jpg");
 }
 
 .static-header.clickthrough-version .overlay {
-	background: #ff6600;
-	background: -moz-linear-gradient(-45deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, #ff6600), color-stop(25%, rgba(255, 102, 0, 0.92)), color-stop(70%, rgba(189, 24, 112, 0.78)), color-stop(100%, rgba(189, 24, 112, 0.68)));
-	background: -webkit-linear-gradient(-45deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
-	background: -o-linear-gradient(-45deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
-	background: -ms-linear-gradient(-45deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
-	background: linear-gradient(135deg, #ff6600 0%, rgba(255, 102, 0, 0.92) 25%, rgba(189, 24, 112, 0.78) 70%, rgba(189, 24, 112, 0.68) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6600', endColorstr='#bd1870', GradientType=1);
+	background: rgba(70, 22, 107, 0.5);
+
 }
 
 .static-header.waiting-list-version {
