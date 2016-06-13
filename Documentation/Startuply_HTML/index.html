@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Startuply v2.1 Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<h1 class="center">Startuply &mdash; Responsive Multi-purpose Landing Page</h1>
+		<center>
+			<img src="assets/images/01_preview.jpg" alt="HTML preview" />
+		</center>
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Updated: 01/09/2015<br>
+					Created: 01/06/2014<br>
+					By: Vivaco<br>
+					Email: <a href="mailto:office@vivaco.com">office@vivaco.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/vivaco">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#less">LESS</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#registration">Forms</a></li>
+			<li><a href="#mailchimp">Mailchimp</a></li>
+			<li><a href="#social">Social networks</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		<hr>
+		
+		<p>Startuply theme comes in two flavours located in separate folders each of them completely isolated and can work withouteach other:</p>
+		<ol class="no-margin">
+			<li><strong>Startuply_HTML</strong></li>
+			<li><strong>Startuply_Builder</strong></li>
+		</ol>
+		
+		<p>The first one is the plain HTML that works out of the box straight in your browser and is what you are looking for in most cases to start editing the template. The second one is a builder that requires some additional setup and PHP enabled webhosting to run, more info on it can be found in enclosed documentation in <strong>Startuply_HTML_v2.0/Documentation/Startuply_Builder</strong></p>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a responsive one page layout with one column made on Bootstrap 3.0 foundation so please refer to original docs for more info (<a href="http://getbootstrap.com/css/">http://getbootstrap.com/css/</a>). If you would like to place or make a full screen width element - please place it outside of this div. The general template structure is the same throughout the template.</p>
+		<p>The template consists of:</p>
+		<ol>
+			<li><b>Startuply_HTML/index.html</b> - photo background</li>
+			<li><b>Startuply_HTML/index-color.html</b> - solid background</li>
+			
+			<li><b>Startuply_HTML/index-video.html</b> - YouTube video background</li>
+			<li><b>Startuply_HTML/index-video-vimeo.html</b> - Vimeo video embed</li>
+			<li><b>Startuply_HTML/index-video-youtube.html</b> - Youtube video embed</li>
+
+			<li><b>Startuply_HTML/index-waiting-list.html</b> - email form and image</li>
+			<li><b>Startuply_HTML/index-promo.html</b> - text, no photos in header</li>
+			<li><b>Startuply_HTML/index-fast-register.html</b> - quick registration</li>
+			<li><b>Startuply_HTML/index-clickthrough.html</b> - gradient css background</li>
+			
+			
+			<li><b>Startuply_HTML/blog.html</b> - blog list</li>
+			<li><b>Startuply_HTML/blog-post.html</b> - blog post</li>
+			
+			<li><b>Startuply_HTML/product.html</b> - single product</li>
+			<li><b>Startuply_HTML/product-grid.html</b> - product grid</li>
+			<li><b>Startuply_HTML/product-list.html</b> - product list</li>
+			<li><b>Startuply_HTML/cart-checkout.html</b> - eCommerce checkout</li>
+			<li><b>Startuply_HTML/payment-confirm.html</b> - eCommerce confirmation</li>
+			
+			<li><b>Startuply_HTML/register.html</b> - registration</li>
+			
+			<li><b>Startuply_HTML/icons-reference.html</b> - icon class names</li>
+			<li><b>Startuply_HTML/shortcodes.html</b> - design elements</li>
+			
+			<li><b>Startuply_HTML/signup.php</b> - main form processing script, all forms data is submitted here</li>
+			
+			
+			
+			<li><b>Sources/Startuply_PSD.psd</b> - main PSD template</li>
+			<li><b>Sources/Content/</b> - content PSD templates</li>
+		</ol>		
+		<p>All of the boxed blocks within the main content area are nested within a div with an class of "container" Here is the general structure.</p>
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		<p>If you would like to edit the color preset of the theme you should do "Replace all" this color <b>#ff7701</b> with the desired one or use any of those predefined ones :</p>
+		<pre>	
+		*	<b>Pink</b> - ff5f9b
+		*	<b>Green</b> - 39c8b7
+		*	<b>Blue</b> - 59bbd7
+		*	<b>Berry</b> - fe6760
+		*	<b>Orange</b> - ff7200
+		</pre>
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This template is built on Bootstrap 3.1.1 foundation and uses several CSS files:</p> 
+			<ol>
+				<li><b>assets/css/style.css</b> - template styles</li>
+				<li><b>assets/css/custom-animations.css</b> - additional custom animations</li>
+				<li><b>assets/css/lib/bootstrap.min.css</b> - the main bootstrap styles</li>
+				<li><b>assets/css/lib/animate.css</b> - animations</li>
+				<li><b>assets/css/lib/toastr.css</b> - notification styles</li>
+				<li><b>assets/css/lib/font-awesome.min.css</b> - FontAwesome font styles</li>
+				<li><b>assets/css/lib/font-lineicons.css</b> - LineIcons font styles</li>
+			</ol>
+		<p>While you can surely edit any file you want, please note that main template styles reside in <b>styles.css</b> file. If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+		
+		<pre>	
+
+		/*==========================================================================
+		  RESETS AND MASTER STYLES 
+		  ========================================================================== */
+		  
+		  some code
+		  
+		/*==========================================================================
+		  GENERAL & RE-USABLE ADJUSTMENTS
+		  ========================================================================== */
+
+		  some code
+			
+		  -------------
+		  etc, etc. 
+		</pre>
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+		<hr>
+		
+		<h3 id="cssFiles"><strong>C) Less & Grunt support</strong> - <a href="#toc">top</a></h3>
+		<p>Since version 2.0 we now have included all LESS files and Grunt packaging script this template to make it easier for everyone with advanced skills to edit the template even faster and easier!</p>
+		
+		<ol>
+			<li><b>assets/Gruntfile.js</b> - Grunt script</li>
+			<li><b>assets/less/*.less</b> - LESS styles</li>
+		</ol>
+	
+		<p>
+		<a href="http://lesscss.org/">Less</a> is a CSS preprocessor which drastically improves CSS development time and efifciency adding such things as CSS nesting, variables, mix-ins and more other cools things. Less documentation can be found here <a href="http://lesscss.org/features/">LESS Docs</a> 
+
+		Apart from the Less itselft we also use very handy mix-in library for it named <a href="http://lesshat.madebysource.com/">LessHat</a>, some documentation for it can be found here <a href="https://github.com/madebysource/lesshat/blob/master/README.md#-documentation">LessHat Docs</a>
+
+		Modern browser cannot process less files directly so they should be compiled into default CSS files. There are a lot of ways doing so, we will list two of the most used ones:
+		</p>
+		
+		<p>
+		<strong>First Option</strong> - is very fast and easy but can be used only as a temporary solution. Less files can be compiled into working CSS on the fly with <a href="http://lesscss.org/#download-options">less.js</a> script. Just include less.js and styles.less inside your html document head, please do not change the inclusion order!
+		</p>
+		
+		<pre>
+	&lt;link rel="stylesheet/less" type="text/css" href="styles.less" /&gt;
+	&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;
+		</pre>
+		
+		
+		<p>
+		<strong>Second option</strong> (preferred) is to setup Less compiler with Node.js and Grunt, please follow these steps in order to do so:
+		<ol>
+			<li>Download and install <a href="https://nodejs.org/">node.js</a></li>
+			<li>Launch Node.js command prompt for Windows or Terminal for Mac OS</li>
+			<li>Install packages grunt-cli <strong>npm install -g grunt-cli</strong></li>
+			<li>Navigate to /Startuply_HTML_v2.0/assets/ and run <strong>npm install</strong></li>
+		</ol>
+		</p>
+		
+		<p>
+		All done, now you can use Grunt!
+		</p>
+		
+		<p>
+		If you run <strong>grunt</strong> from your console the script will compile
+		<ol class="no-margin">
+			<li>css/style.css from less/styles/style.less</li>
+			<li>css/animations.css from less/animations.less</li>
+		</ol>
+		</p>
+		
+		<p>
+		If you run <strong>grunt color</strong> from your console the script will compile
+		<ol class="no-margin">
+			<li>css/style-blue-color.css from less/styles/style-blue-color.less</li>
+			<li>css/style-green-color.css from less/styles/style-green-color.less</li>
+			<li>css/style-pink-color.css from less/styles/style-pink-color.less</li>
+			<li>css/style-berry-color.css from less/styles/style-berry-color.less</li>
+			<li>css/style-orange-color.css from less/styles/style-orange-color.less</li>
+		</ol>
+		</p>
+		
+		<p>
+		If you run <strong>grunt production</strong> from your console the script will compile all files as well as minified files:
+		<ol class="no-margin">
+			<li>css/min/style.min.css from less/styles/style.less</li>
+			<li>css/min/animations.css from less/animations.less</li>
+			<li>css/min/style-blue-color.min.css from less/styles/style-blue-color.less</li>
+			<li>css/min/style-pink-color.min.css from less/styles/style-pink-color.less</li>
+			<li>css/min/style-green-color.min.css from less/styles/style-green-color.less</li>
+			<li>css/min/style-berry-color.min.css from less/styles/style-berry-color.less</li>
+			<li>css/min/style-orange-color.min.css from less/styles/style-orange-color.less</li>
+		</ol>
+		</p>
+		
+		<p>
+		If you run <strong>grunt watch</strong> from your console (works only if you have local web server) the script will watch for all changes in your .less files and compile them real-time (greatly improves CSS development speed and convenience, no more refreshes every time!), also these scripts will be compiled:
+		<ol class="no-margin">
+			<li>css/style.css from less/styles/style.less</li>
+			<li>css/animations.css from less/animations.less</li>
+		</ol>
+		</p>
+		 
+		<p>
+		Also, if you install LiveReload (<a href="https://chrome.google.com/webstore/detail/remotelivereload/jlppknnillhjgiengoigajegdpieppei">Chrome</a> or <a href="https://addons.mozilla.org/ru/firefox/addon/livereload/">Firefox</a>) and have <strong>grunt watch</strong> running the webpage will be updated autiomatically in real-time when any .less script is updated, how awesome is that!
+		</p>
+
+		<hr/>
+		
+		<h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+		<p>These scripts are the bare minimum for StartuplyHTML theme to work</p>
+		<ol class="no-margin">
+			<li><strong>assets/js/jquery-2.1.4.min.js</strong> - jQuery</li>
+			<li><strong>assets/js/bootstrap.min.js</strong> - Bootstrap</li>
+			<li><strong>assets/js/startuply.js</strong> - Main theme JS script</li>
+		</ol>
+		
+		<p>
+		All other scripts are not mandatory but are required for additional theme functionality:
+		<p>
+		
+		<ol class="no-margin">
+			<li><strong>jquery.flexslider-min.js</strong> - used for testimonials</li>
+			<li><strong>jquery.appear.js</strong> - to initiate animations once element gets to the current viewport</li>
+			<li><strong>jquery.countdown.js</strong> - countdown script</li>
+			<li><strong>jquery.plugin.js</strong> - additional small scripts</li>
+			<li><strong>jquery.waypoints.min.js</strong> - secondary script for onePageNav</li>
+			<li><strong>jquery.validate.min.js</strong> - for validation uses ajaxedForms.</li>
+			<li><strong>toastr.min.js</strong> - for all kinds of notifications uses ajaxedForms.</li>
+		</ol>
+		
+		<p>The main theme JS script <strong>assets/js/startuply.js</strong> has several settings that we decided to move in the header for easier configuration</p>
+			
+			<ol class="no-margin">
+				<li><strong>log</strong> (default: false) - logs in console</li>
+				<li><strong>styleSwitcher</strong> (default: false) - enables style switcher (used only in our live demo)</li>
+				<li><strong>animations</strong> (default: true) - animations</li>
+				<li><strong>onePageNav</strong> (default: true) - one page navigation</li>
+				<li><strong>onePageNavHashChange</strong> (default: false) - url hash change when scrolling for onePageNav</li>
+				<li><strong>alwaysMobileMenuMode</strong> (default: false) - menu will always have mobile style</li>
+				<li><strong>mobileMenuMaxWidth</strong> (default: 768) - screen width in pixels when menu becomes mobile</li>
+				<li><strong>stickyMenuMode</strong> (default: true) - Sticky menu</li>
+				<li><strong>stickyMenuOffset</strong> (default: 500) - height offset in pixels to show sticky menu</li>
+				<li><strong>smoothScroll</strong> (default: false) - smooth scroll</li>
+				<li><strong>smoothScrollSpeed</strong> (default: 800) - smooth scroll speed</li>
+				<li><strong>ajaxedForm</strong> (default: true) - ajax form submit (does POST serialize on all forms and sends the data to form action attribute)</li>
+				<li><strong>ajaxedFormSuccessMsg</strong> (default: 'Success') - success message for forms</li>
+				<li><strong>ajaxedFormErrorMsg</strong> (default: 'An error occured. Please try again later.') - error message for rorms</li>
+				<li><strong>toastrPositionClass</strong> (default: 'toast-top-full-width') - toastr position</li>
+			</ol>
+			<p>
+			But there is more: startuply.js is made this way so it can also listen to data-attributes of html elements. These are the same parametrs as above but in camelcase e.g.: smoothScrollSpeed becomes data-smooth-scroll-speed. This way you can control the general setting in master config but then fine-tune the element behaviour per page!
+			</p>
+
+			<li>Template's JavaScript <strong>assets/js/startuply.js</strong> is used mostly to initialize 3rd party plugins and libraries and pass default parameters to them
+		<pre>	
+//Flexislider for testimonials
+	if($('.testimonials-slider').length != 0) {
+		$('.testimonials-slider').flexslider({
+			manualControls: '.flex-manual .switch',
+			nextText: "",
+			prevText: "",
+			startAt: 1,
+			slideshow: false,
+			direction: "horizontal",
+			animation: "slide"
+		});
+};
+    
+// Headhesive for sticky menu init
+    var options = {  // set options
+            offset: '#showHere',
+            classes: {
+                clone:   'fixmenu-clone',
+                stick:   'fixmenu-stick',
+                unstick: 'fixmenu-unstick'
+            }
+};
+		</pre>
+			</li>
+		</ol>
+		<hr>		
+		
+		<h3 id="registration"><strong>E) Forms</strong> - <a href="#toc">top</a></h3>
+		<p>Startuply v2.0 comes with a lot of forms built it in found in <strong>forms.html</strong> file. You can copy paste them to any page you need and they will work. All forms found on other pages also do work and by default it just sends the form data to the specified email so if you need to edit the receivers email as well as the mail text you will need to edit signup.php file.</p> 
+		<ol>
+			<li><b>Startuply_HTML/signup.php</b> -  add your email address, edit fields, edit email text</li>
+			<li><b>Startuply_HTML/forms.html</b> -  all theme forms are found here</li>
+		</ol>
+		<p>The form is validated and then submitted on the register.html page which then sends the data to process-form.php file that just gets the variables and forards the data to your email</p>
+		<hr>	
+		
+		<h3 id="mailchimp"><strong>F) Mailchimp integration</strong> - <a href="#toc">top</a></h3>
+		<p>ANY form in Startuply can have Mailchimp enabled, In order to do so please follow these steps:</p> 
+		<ol>
+			<li>add <strong>mailchimp-form</strong> class to any form, this enables Mailchimp API for it</li>
+			<li>make sure your form has the fields named: FNAME/LNAME (or FULLNAME) and EMAIL so it is properly forwarded to Mailchimp API and then saved</li>
+			<li>edit <b>assets/mailchimp/inc/store-address.php</b> -  add Mailchimp API key at line <b>#36</b> and subscription list ID at line <b>#40</b></li>
+		</ol>
+		<img src="assets/images/mailchimp-forms.jpg"/>
+		<p>Please refer to the original script author if you need a deeper insight - <a href="http://stackoverflow.com/questions/5025455/some-basic-mailchimp-api-examples-required">http://stackoverflow.com/questions/5025455/some-basic-mailchimp-api-examples-required</a></p>
+		<hr>
+		
+		<h3 id="social"><strong>G) Social networks</strong> - <a href="#toc">top</a></h3>
+		<p>All links to social networks are hardcoded and should be changed directly in the code</p>
+		<hr>		
+				
+		<h3 id="credits"><strong>H) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		<p>I've used the following images, icons or other files as listed.</p>
+		<ul>
+			<li>Google Fonts -<a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a></li>
+			<li>Font Awesome 4.1 - <a href="http://fontawesome.io">http://fontawesome.io</a></li>
+			<li>Bootstrap Framework - <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+		</ul>
+		<hr>
+		
+		<p>We would be glad to help you if you have any questions relating to this theme. No guarantees, but we will do our best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item support" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Vivaco Media</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

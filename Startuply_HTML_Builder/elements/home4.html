@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+	<meta name="description" content="Startups template">
+	<meta name="keywords" content="Startups template">
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/builder-fix.css" />
+</head>
+
+<body id="landing-page" class="landing-page">
+	<div id="page" class="page">
+
+		<div id="hero" class="bg bg1 static-header window-height plain-version light-text hero-section ytp-player-background clearfix" data-property="{videoURL: 'https://www.youtube.com/watch?v=hln55FEspG0', containment: '#hero', autoPlay: true, realfullscreen: true, stopMovieOnBlur: false, addRaster: false, showControls: false, mute:true, startAt:0, opacity:1, gaTrack: false}">
+			<div class="heading-block align-center">
+				<h1 class="editContent">Do not wait &mdash; <span class="highlight">launch</span> your startup now!</h1>
+				<h5 class="editContent">this tempate is flexible enough to suit any kind of startup or new business</h5>
+				<ul class="list-inline light-text">
+					<li><a href="#" class="btn btn-solid editContent">Get started</a></li>
+					<li><a href="#" class="btn btn-outline editContent">Take tour</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div><!-- /#page -->
+
+	<!--[if lt IE 9]> <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script> <![endif]-->
+	<!--[if (gte IE 9) | (!IE)]><!--> <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script> <!--<![endif]-->
+
+	<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-ui-slider.min.js"></script>
+	<script type="text/javascript" src="assets/js/startuply.js"></script>
+	<script type="text/javascript" src="assets/js/builder-fix.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			videoBackgroundInit();
+		});
+
+		var videoBackgroundInit = function () {
+			if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				mobileDevice = true;
+			}else {
+				mobileDevice = false;
+			}
+
+			$('.ytp-player-background').each( function() {
+				var $el = $(this),
+					$player,
+					controlsTempalte;
+
+				if ( $el.data('video') && $el.data('video').length ) {
+					$el.css('background-image', 'url(https://i.ytimg.com/vi/' + $el.data('video') + '/maxresdefault.jpg)');
+				}
+
+				if( !mobileDevice && $(window).width() >= 768 && typeof $.fn.YTPlayer == 'function' ) {
+					$player = $el.YTPlayer();
+					controlsTempalte = '<div class="video-conrols">' +
+											'<i class="yt-play-btn-big"></i>' +
+											'<div class="bottom">' +
+												'<div class="controls-container">' +
+													'<i class="yt-play-toggle"></i>' +
+													'<i class="yt-mute-toggle active"></i>' +
+													'<div class="yt-volume-slider"></div>' +
+													'</div>' +
+												'</div>' +
+											'<div>';
+
+					$el.append(controlsTempalte);
+
+					var $playBtn = $el.find('.yt-play-btn-big'),
+						$playToggle = $el.find('.yt-play-toggle'),
+						$muteToggle = $el.find('.yt-mute-toggle'),
+						$volumeSlider = $el.find('.yt-volume-slider');
+
+					if ( typeof $.fn.slider == 'function' ) {
+						$volumeSlider.slider({
+							range: 'min',
+							min: 0,
+							max: 100,
+							step: 5,
+							value: 50,
+
+							slide: function ( event, ui ) {
+								$player.setYTPVolume(ui.value);
+							}
+						});
+					}else {
+						console.log( 'Can\'t find jQuery.slider function. Volumn slider doesn\'t work.');
+					}
+
+					$playBtn.on('click.startuply', function () {
+						$player.getPlayer().playVideo();
+					});
+
+					$playToggle.on('click.startuply', function () {
+						if ( $(this).is('.active') ) $player.getPlayer().playVideo();
+						else $player.getPlayer().pauseVideo();
+					});
+
+					$muteToggle.on('click.startuply', function () {
+						$player.toggleVolume();
+					});
+
+					$player.on('YTPStart.startuply', function () {
+						$playBtn.fadeOut(300);
+						$playToggle.removeClass('active');
+					});
+
+					$player.on('YTPPause.startuply', function () {
+						$playBtn.fadeIn(200);
+						$playToggle.addClass('active');
+					});
+
+					$player.on('YTPMuted.startuply', function () {
+						$muteToggle.addClass('active');
+					});
+
+					$player.on('YTPUnmuted.startuply', function () {
+						$muteToggle.removeClass('active');
+					});
+
+				} else {
+					$el.addClass('no-video-bg');
+
+					if ( typeof $.fn.YTPlayer != 'function' ) {
+						console.log( 'Can\'t find jQuery.YTPlayer function. Video background blocks doesn\'t work.' );
+					}
+				}
+			});
+		}
+	</script>
+</body>
+</html>

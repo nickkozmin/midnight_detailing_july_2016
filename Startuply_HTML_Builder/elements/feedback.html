@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+	<meta name="description" content="Startups template">
+	<meta name="keywords" content="Startups template">
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/builder-fix.css" />
+</head>
+
+<body id="landing-page" class="landing-page">
+	<div id="page" class="page">
+
+		<section class="section feedback-section align-center light-text animated" data-animation="fadeInDown" data-duration="500">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="editContent">WHAT <span class="highlight">CLIENTS</span> SAY</h2>
+				</div>
+				<div class="section-content" id="feedback">
+					<!-- BEGIN SLIDER CONTENT -->
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="flexslider testimonials-slider align-center">
+							<ul class="slides">
+								<li>
+									<div class="testimonial align-center clearfix">
+										<blockquote class="editContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</blockquote>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial align-center clearfix">
+										<blockquote class="editContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</blockquote>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial align-center clearfix">
+										<blockquote class="editContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</blockquote>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- END SLIDER -->
+				</div>
+			</div>
+		</section>
+
+		<section class="section feedback-controls-section align-center light-text animated" data-animation="fadeInDown" data-duration="500">
+			<div class="container" id="feedback_controls">
+				<div class="col-md-10 col-md-offset-1">
+					<!-- BEGIN CONTROLS -->
+					<div class="flex-manual">
+						<div class="col-xs-12 col-sm-4 wrap">
+							<div class="switch flex-active">
+								<img alt="client" src="assets/img/people/profile-1.jpg" class="sm-pic img-circle pull-left" width="69" height="70">
+								<p class="editContent"><span class="highlight">AMY WARNER</span><br/>Investor at <span class="highlight">Pear Inc.</span></p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 wrap">
+							<div class="switch pull-left">
+								<img alt="client" src="assets/img/people/profile-2.jpg" class="sm-pic img-circle pull-left" width="69" height="70">
+								<p class="editContent"><span class="highlight">JOHN DOESOME</span><br/>Accountant at <span class="highlight">Vell Inc.</span></p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 wrap">
+							<div class="switch">
+								<img alt="client" src="assets/img/people/profile-1.jpg" class="sm-pic img-circle pull-left" width="68" height="69">
+								<p class="editContent"><span class="highlight">PETER MOOSOME</span><br/>VP Marketing at <span class="highlight">Footbook</span></p>
+							</div>
+						</div>
+					</div>
+					<!-- END CONTROLS -->
+				</div>
+			</div>
+		</section>
+
+	</div><!-- /#page -->
+
+	<!-- Load JS here for greater good =============================-->
+
+	<!--[if lt IE 9]> <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script> <![endif]-->
+	<!--[if (gte IE 9) | (!IE)]><!--> <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script> <!--<![endif]-->
+	<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="assets/js/startuply.js"></script>
+	<script type="text/javascript" src="assets/js/builder-fix.js"></script>
+
+	<script type="text/javascript">
+		var flexsliderOptions = {
+				manualControls: '.flex-manual .switch',
+				nextText: '',
+				prevText: '',
+				startAt: 1,
+				slideshow: false,
+				direction: 'horizontal',
+				animation: 'slide'
+			},
+			flexSliderInit = function () {
+				if ( $('.testimonials-slider').length ) {
+					if ( typeof $.fn.flexslider == 'function' ) {
+						$('.testimonials-slider').each(function () {
+							$(this).flexslider(flexsliderOptions);
+						});
+
+					}else {
+						console.log( 'Can\'t find jQuery.flexslider function' );
+					}
+				}
+			}
+
+		$(window).on('load.startuply', function() {
+			flexSliderInit();
+		});
+
+	</script>
+</body>
+</html>
