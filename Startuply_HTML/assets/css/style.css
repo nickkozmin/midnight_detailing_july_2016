@@ -5930,7 +5930,7 @@ body:not(.always-mobile) .navigation-bar > .dropdown:not(.featured) > .dropdown-
 	bottom: 100%;
 	display: block;
 	content: "";
-	background-color: #272727;
+	background-color: #ffffff;
 	border-style: solid;
 	border-width: 0;
 	z-index: -1;
@@ -7788,5 +7788,9 @@ blockquote {
 	margin-left: 0;
 }
 
+}
+
+.panel-default > .panel-heading{
+	background-color: rgba(70, 22, 107, 0.7)
 }
 
