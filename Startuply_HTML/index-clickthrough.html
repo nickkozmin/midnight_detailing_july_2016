@@ -20,6 +20,13 @@
 		<script src="assets/js/html5shiv.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
+
+	<!-- Calendly badge widget begin -->
+	<link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://calendly.com/assets/external/widget.js" type="text/javascript"></script>
+	<script type="text/javascript">Calendly.showBadgeWidget({url: 'https://calendly.com/jake-13', text: 'Book Demo', color: '#5b2883', branding: false});</script>
+	<!-- Calendly badge widget end -->
+
 </head>
 
 <body id="landing-page" class="landing-page">
@@ -27,9 +34,9 @@
 	<div class="preloader-mask">
 		<div class="preloader"><div class="spin base_clr_brd"><div class="clip left"><div class="circle"></div></div><div class="gap"><div class="circle"></div></div><div class="clip right"><div class="circle"></div></div></div></div>
 	</div>
-
 	<!-- Header -->
 	<header>
+
 		<nav class="navigation navigation-header">
 			<div class="container">
 				<div class="navigation-brand">
@@ -51,8 +58,90 @@
 						<li><a href="#team">Team</a></li>
 					</ul>
 					<ul class="navigation-bar navigation-bar-right">
-						<li><a href="register.html">Login</a></li>
-						<li class="featured"><a class="btn btn-sm btn-outline-color" href="register.html">Book Demo</a></li>
+						<li class="dropdown" id="login">
+							<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin" aria-expanded="true">Login</a>
+							<div id="innerdropdownform" class="dropdown-menu pull-right wider-dropdown-form dropdown-overflow-scroll">
+								<div id="loginbox" sytle="margin-top:20px"; class="mainbox col-md-12">
+									<div class="panel panel-info">
+										<div class="panel-heading">
+											<div class="panel-title">Sign In</div>
+										</div>
+										<div class="panel-body">
+											<div style="display:none" id="login-alert" class="alert alert-danger col-xs-12"></div>
+											<form id="loginform" class="form-horizontal login" role="form" method="post" action="/accoutns/login/">
+												<div class="col-xs-12">
+													<div class="form-group">
+														<label class="control-label" for="id_login">Username</label>
+														<div>
+															<input autofocus="autofocus" class="form-control" id="id_login" maxlength="30"
+																   name="login" placeholder="Username" type="text"/>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="control-label" for="id_password">Password</label>
+														<div>
+															<input class="form-control" id="id_password" name="password" placeholder="Password" type="password">
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="checkbox">
+															<label>
+																<input id="id_remember" name="remember" type="checkbox">
+																<span>Remember Me</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="links" style="float:right; font-size:80%; position: relative; top: -2.8em">
+													<a href="/accounts/password/reset">Forgot Password?</a>
+												</div>
+												<div style="margin-top: 10px;" class="form-group">
+													<div class="col-xs-12">
+														<button class="primaryAction btn splash-btn btn-block btn-success splash-btn-success" type="submit">
+															Sign In
+														</button>
+													</div>
+												</div>
+												<div class="socialaccount_ballot">
+													<ul class="socialaccount_providers" sytle="display:table; margin-left:auto; margin-right:auto; padding-left: 0px">
+														<li style="margin: 1em">
+															<a title="LinkedIn" class="socialaccount_provider linkedin_oauth2 btn btn-block btn-social btn-linkedin splash-btn
+															splash-btn-social" href="/accounts/linkedin_oauth2/login/?process=login">
+																<i class="fa fa-linkedin"></i>LinkedIn
+															</a>
+														</li>
+														<li style="margin: 1em">
+															<a title="Facebook" class="socialaccount_provider facebook btn btn-block btn-social btn-facebook
+															splash-btn splash-btn-social" href="javascript: ">
+																<i class="fa fa-facebook"></i>
+																Facebook
+															</a>
+														</li>
+														<li style="margin: 1em">
+															<a title="Twitter" class="socialaccount_provider twitter btn btn-block btn-social
+															btn-twitter splash-btn splash-btn-social" href="/accounts/twitter/login/?process=login">
+																<i class="fa fa-twitter">
+																</i>
+																Twitter
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="form-group">
+													<div class="col-xs-12 control">
+														<div class="links black-text-forms" style="border-top: 1px solid#888; padding-top: 15px; font-size:85%;">
+															Don't have an account!
+															<a href="/accounts/signup/">Sign Up Here</a>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="featured"><a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-sm btn-outline-color">Book Demo</a></li>
 					</ul>
 				</div>
 			</div>
@@ -68,7 +157,7 @@
 					<p class="sub-title">Give us 30 days. We'll get you new leads. </p>
 				</div>
 				<div class="animated" data-animation="fadeInUp" data-duartion="500" data-delay="200">
-					<a href="#" class="btn btn-outline">Book Demo</a>
+					<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline">Book Demo</a>
 				</div>
 			</div>
 		</div>
@@ -78,14 +167,14 @@
 		<div class="container">
 			<ul class="list-inline logos">
 				<h5>Partners and Publishers</h5>
-				<li><img class="animated" data-animation="fadeInDown" data-duration="500" src="assets/img/logos/Bloomberg_logo.png" alt="Bloomberg" style="width: 155px; height: 35px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" src="assets/img/logos/Bloomberg_logo.png" alt="Bloomberg" style="width: 155px; height: 35px; margin-bottom: 10px;"/></li>
 				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="200" src="assets/img/logos/business-insider-logo.png" alt="Business-Insider" style="width: 80px; height: 50px;"/></li>
 				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="400" src="assets/img/logos/envestnet-logo.png" alt="Envestnet" style="width: 130px; height: 50px;"/></li>
 				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="600" src="assets/img/logos/Forbes_logo.svg.png" alt="Forbes"
                          style="width: 90px; height: 38px; padding-bottom: 10px;"/></li>
-				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Investopedia_logo.png" alt="Investopedia" style="width: 130px; height: 40px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Investopedia_logo.png" alt="Investopedia" style="width: 140px; height: 30px; margin-bottom: 8px;"/></li>
 				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="1000" src="assets/img/logos/new_york_times_logo.jpg" alt="New York Times" style="width: 60px; height: 50px;"/></li>
-				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Reuters_logo.png" alt="Reuters" style="width: 125px; height: 45px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Reuters_logo.png" alt="Reuters" style="width: 125px; height: 35px; margin-bottom: 10px;"/></li>
 			</ul>
 		</div>
 	</div>
@@ -107,7 +196,7 @@
 							Over the past 6 months I have gotten 7 new referrals which has led to 50k in profits.</h6>
 						<p class="sub-title"><em>-John Smith, Independent Financial Advisor</em></p>
 						<br>
-						<a href="#" class="btn btn-outline-color">Book Demo</a>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline-color">Book Demo</a>
 					</article>
 				</div>
 
@@ -128,7 +217,7 @@
 						 </h6>
 						<p class="sub-title"><em>-Mary Street, Financial Advisor</em></p>
 						<br>
-						<a href="#" class="btn btn-outline-color">Book Demo</a>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline-color">Book Demo</a>
 					</article>
 				</div>
 
@@ -145,7 +234,7 @@
 						This saves me time and money, allowing me to focus on closing new leads.</h6>
 						<p class="sub-title"><em>-Mike Gill, Financial Advisor</em></p>
 						<br>
-						<a href="#" class="btn btn-outline-color">Book Demo</a>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline-color">Book Demo</a>
 					</article>
 				</div>
 
@@ -165,13 +254,12 @@
 						 </h6>
 						<p class="sub-title"><em>-Joel Acosta, Firm</em></p>
 						<br>
-						<a href="#" class="btn btn-outline-color">Book Demo</a>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline-color">Book Demo</a>
 					</article>
 				</div>
 			</div>
 		</div>
 	</section>
-
 
     <!----------------------------  WHAT PAGES APPLY TO WHAT IMAGE
                                     CAPTIONS NEEDED
@@ -274,77 +362,65 @@
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
 						<img src="assets/img/Clients/ALLSTATE.png" alt="Allstate" style="width: 160px; height: 100px;"/>
-						<span class="heading">Allstate</span>
 					</article>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
 						<img src="assets/img/Clients/ameriprise-finanical.png" alt="Emeriprise" style="width: 100px; height: 100px;"/>
-						<span class="heading">Ameriprise Financial</span>
 					</article>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-						<img src="assets/img/Clients/Argosy-Securities.png" alt="Argosy" style="width: 100px; height: 100px;"/>
-						<span class="heading">Argosy Securities</span>
+                        <img src="assets/img/Clients/Scotia.jpg" alt="Scoita" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-						<img src="assets/img/Clients/Avisen_Securities_Inc.jpg" alt="Avisen" style="width: 100px; height: 100px;"/>
-						<span class="heading">Avisen Securities</span>
+                        <img src="assets/img/Clients/SEI.png" alt="SEI" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
 			</div>
 			<div class="clearfix animated" data-duration="500" data-animation="fadeInLeft">
-				<div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Axis_Advisors.png" alt="Axis" style="width: 170px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
-						<span class="heading">Axis Advisors</span>
+                        <img src="assets/img/Clients/TD.png" alt="TD" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
+				 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-						<img src="assets/img/Clients/BluePrint-Asset-Management.png" alt="Blueprint" style="width: 170px; height: 170px; margin-top: -40px; margin-bottom: -30px;"/>
-						<span class="heading">Blueprint Asset Management</span>
+                        <img src="assets/img/Clients/New-York-Life.png" alt="New York Life" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Common-Wealth-Financial.jpg" alt="Commonwealth" style="width: 100px; height: 100px;"/>
-						<span class="heading">Commonwealth Financial Group</span>
 					</article>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Cornerstone.jpg" alt="Cornerston" style="width: 170px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
-						<span class="heading">Cornerstone Wealth Management</span>
+                        <img src="assets/img/Clients/National-Bank.png" alt="National-Bank" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
             </div>
             <div class="clearfix animated" data-duration="500" data-animation="fadeInRight">
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Foresters-Financial.png" alt="Foresters" style="width: 100px; height: 100px;"/>
-						<span class="heading">Foresters Financial</span>
+                        <img src="assets/img/Clients/Mandeville-Private-Client.png" alt="Mandeville" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/freedom-55-financial.png" alt="Freedom55" style="width: 100px; height: 100px;"/>
-						<span class="heading">Freedom 55 Financial</span>
 					</article>
 				</div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/grow-your-wealth-financial.jpg" alt="Grow Your Wealth" style="width: 150px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
-						<span class="heading">Grow Your Wealth</span>
+                        <img src="assets/img/Clients/mass-mutual.png" alt="Mass Mutual" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Horizon-Financial.png" alt="Horizon" style="width: 150px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
-						<span class="heading">Horizon Financial Group</span>
 					</article>
 				</div>
             </div>
@@ -352,25 +428,21 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/IndustrialAliance.png" alt="Industrial Alliance" style="width: 130px; height: 80px; margin-top: 10px; margin-bottom: 10px;"/>
-						<span class="heading">Industrial Alliance</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/IPC.gif" alt="IPC" style="width: 160px; height: 80px; margin-top: 10px; margin-bottom: 10px;"/>
-						<span class="heading">IPC Securities Group</span>
+                        <img src="assets/img/Clients/Primerica.png" alt="Primerica" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/ipl.png" alt="IPL" style="width: 160px; height: 30px; margin-bottom: 35px; margin-top: 35px"/>
-						<span class="heading">IPL</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/ISPlus-Financial.jpg" alt="ISPlus" style="width: 160px; height: 100px;"/>
-						<span class="heading">ISPlus Financial</span>
+                        <img src="assets/img/Clients/United-Advisors.png" alt="United" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
             </div>
@@ -378,51 +450,43 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Landolt-Securities.jpg" alt="Landold" style="width: 170px; height: 100px;"/>
-						<span class="heading">Landolt Securities</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Mandeville-Private-Client.png" alt="Mandeville" style="width: 100px; height: 100px;"/>
-						<span class="heading">Mandeville Private Client</span>
+                        <img src="assets/img/Clients/Foresters-Financial.png" alt="Foresters" style="width: 100px; height: 100px;"/>
+					</article>
+				</div>
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+					<article class="align-center">
+                        <img src="assets/img/Clients/grow-your-wealth-financial.jpg" alt="Grow Your Wealth" style="width: 150px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/mass-mutual.png" alt="Mass Mutual" style="width: 100px; height: 100px;"/>
-						<span class="heading">Mass Mutual</span>
-					</article>
-				</div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-					<article class="align-center">
-                        <img src="assets/img/Clients/National-Bank.png" alt="National-Bank" style="width: 100px; height: 100px;"/>
-						<span class="heading">National Bank</span>
+                        <img src="assets/img/Clients/Cornerstone.jpg" alt="Cornerston" style="width: 170px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
 					</article>
 				</div>
             </div>
             <div class="clearfix animated" data-duration="500" data-animation="fadeInLeft">
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/New-York-Life.png" alt="New York Life" style="width: 100px; height: 100px;"/>
-						<span class="heading">New York Life</span>
+						<img src="assets/img/Clients/BluePrint-Asset-Management.png" alt="Blueprint" style="width: 170px; height: 170px; margin-top: -40px; margin-bottom: -30px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Olympic.jpg" alt="Olympic" style="width: 100px; height: 100px;"/>
-						<span class="heading">Olympic Golden Retirements</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Primerica.png" alt="Primerica" style="width: 100px; height: 100px;"/>
-						<span class="heading">Primerica</span>
+                        <img src="assets/img/Clients/IPC.gif" alt="IPC" style="width: 160px; height: 80px; margin-top: 10px; margin-bottom: 10px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/River-Wealth-Management.png" alt="River-Wealth" style="width: 150px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
-						<span class="heading">River Wealth Management</span>
 					</article>
 				</div>
             </div>
@@ -430,48 +494,44 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Safety-First.png" alt="Safety First" style="width: 100px; height: 100px;"/>
-						<span class="heading">Safety Fist</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/Scotia.jpg" alt="Scoita" style="width: 100px; height: 100px;"/>
-						<span class="heading">Scotia Wealth</span>
+						<img src="assets/img/Clients/Argosy-Securities.png" alt="Argosy" style="width: 100px; height: 100px;"/>
+					</article>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<article class="align-center">
+						<img src="assets/img/Clients/Avisen_Securities_Inc.jpg" alt="Avisen" style="width: 100px; height: 100px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/SEI.png" alt="SEI" style="width: 100px; height: 100px;"/>
-						<span class="heading">SEI</span>
-					</article>
-				</div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-					<article class="align-center">
-                        <img src="assets/img/Clients/TD.png" alt="TD" style="width: 100px; height: 100px;"/>
-						<span class="heading">TD</span>
+                        <img src="assets/img/Clients/Axis_Advisors.png" alt="Axis" style="width: 170px; height: 60px; margin-top: 20px; margin-bottom: 20px;"/>
 					</article>
 				</div>
             </div>
             <div class="clearfix animated" data-duration="500" data-animation="fadeInLeft">
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
-                        <img src="assets/img/Clients/United-Advisors.png" alt="United" style="width: 100px; height: 100px;"/>
-						<span class="heading">United Advisors</span>
+                        <img src="assets/img/Clients/ISPlus-Financial.jpg" alt="ISPlus" style="width: 160px; height: 100px;"/>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Vision-Solved-Wealth-Management.jpg" alt="Vision" style="width: 100px; height: 100px;"/>
-						<span class="heading">Vision Solved Wealth Management</span>
 					</article>
 				</div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
 					<article class="align-center">
                         <img src="assets/img/Clients/Wise-Money-Strategy.png" alt="Wise Money" style="width: 140px; height: 100px;"/>
-						<span class="heading">Wise Money Strategies</span>
 					</article>
 				</div>
 			</div>
+            <div class="section-footer">
+                <p class="sub-header">And Many More</p>
+            </div>
 		</div>
 	</section>
 
@@ -482,12 +542,12 @@
 			<div class="col-md-9 col-lg-9">
 				<article class="pull-left">
 					<h3> Give us 30 days. We'll get you new leads</h3>
-					<p class="thin">One of our experts will contact you within 48 hours.  We do not sell your information.  We will only send you relevan information for your demo.</p>
+					<p class="thin">One of our experts will contact you within 48 hours.  We do not sell your information.  We will only send you relevant information for your demo.</p>
 				</article>
 			</div>
 
             <div class="col-md-3 col-lg-3">
-					<a href="#" class="btn btn-outline" style="margin-top: 7px;">Book Demo</a>
+				<a onClick="Calendly.showPopupWidget('https://calendly.com/jake-13'); return false;" class="btn btn-outline" style="margin-top: 7px;">Book Demo</a>
             </div>
 		</div>
 	</section>
@@ -510,11 +570,14 @@
                         <div class="team-member">
                             <div class="photo-wrapper">
                                 <div class="overlay-wrapper">
-                                    <img src="assets/img/people/team-1.jpg" alt="">
+                                    <img src="assets/img/team/kevin2_0.jpg" alt="Kevin">
                                     <div class="overlay-content">
                                         <div class="text-wrapper">
                                             <div class="text-container">
-                                                <p>Mike has worked with CARE USA, for 12 years holding positions such as Deputy Country Director to Director of Programs and Information Systems.</p>
+												<p>15 years of financial industry experience.
+													Helped launched Clientinsights.ca with Dan Richards.
+													Head of project management for Richardson Partners Financial.
+													In 2007, led a start up in Japan, focused on the online learning space.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -529,18 +592,19 @@
                         <div class="team-member">
                             <div class="photo-wrapper">
                                 <div class="overlay-wrapper">
-                                    <img src="assets/img/people/team-2.jpg" alt="">
+                                    <img src="assets/img/team/Martin_0.jpg" alt="Martin">
                                     <div class="overlay-content">
                                         <div class="text-wrapper">
                                             <div class="text-container">
-                                                <p>Mike has worked with CARE USA, for 12 years holding positions such as Deputy Country Director to Director of Programs and Information Systems.</p>
+                                                <p>15 years software design and development, including 7 years in financial services.
+												</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="name">Bryan</h5>
-                            <p class="position">Developer</p>
+                            <h5 class="name">Martin Hill</h5>
+                            <p class="position">CTO</p>
                         </div>
                     </div>
 
@@ -607,7 +671,7 @@
                         <div class="team-member">
                             <div class="photo-wrapper">
                                 <div class="overlay-wrapper">
-                                    <img src="assets/img/people/team-2.jpg" alt="">
+                                    <img src="assets/img/team/Bryan.jpg" alt="Bryan">
                                     <div class="overlay-content">
                                         <div class="text-wrapper">
                                             <div class="text-container">
@@ -617,8 +681,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="name">Martin</h5>
-                            <p class="position">Developer</p>
+                            <h5 class="name">Bryan Muir</h5>
+                            <p class="position">Sales, Client Success</p>
                         </div>
                     </div>
 
