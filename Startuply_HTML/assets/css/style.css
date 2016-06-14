@@ -4401,7 +4401,7 @@ td.cart-list-item-price {
 	left: 0;
 	right: 0;
 	padding: 3px 0 4px;
-	background-color: transparent;
+	background-color: white;
 	z-index: 100;
 }
 
@@ -4526,7 +4526,7 @@ td.cart-list-item-price {
 	font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
-	color: rgba(240, 240, 240, 0.8);
+	color: #000000;
 	line-height: 1;
 	border-bottom: 2px solid transparent;
 }
@@ -5643,8 +5643,7 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 }
 
 .features-section {
-	margin-bottom: 50px;
-	padding: 0 0 30px;
+	padding-bottom: 70px;
 	background-color: #f0f0f0;
 }
 
@@ -5670,7 +5669,7 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 	margin: 12px 0 13px;
 	font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 43px;
 	line-height: 1.7;
 }
 
