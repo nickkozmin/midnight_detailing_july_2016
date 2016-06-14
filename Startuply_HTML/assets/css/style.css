@@ -4605,7 +4605,7 @@ td.cart-list-item-price {
 }
 
 .navigation-bar > .dropdown:not(.featured) > .dropdown-menu > li:hover {
-	background-color: #000000;
+	background-color: #ffffff;
 }
 
 .navigation-bar > .dropdown:not(.featured) > .dropdown-menu > li:not(:hover) > a {
@@ -4641,8 +4641,9 @@ body:not(.always-mobile) .white-dropdown .navigation-bar > .dropdown:not(.featur
 .navigation-bar .dropdown-menu {
 	margin: 0;
 	padding: 0;
-	background-color: #272727;
+	background-color: #ffffff;
 	border: none;
+	width: 300px;
 }
 
 .navigation-bar .dropdown-menu .dropdown > .dropdown-toggle:after {
