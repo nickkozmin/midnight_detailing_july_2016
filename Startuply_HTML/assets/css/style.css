@@ -7794,3 +7794,19 @@ blockquote {
 	background-color: rgba(70, 22, 107, 0.7)
 }
 
+
+.panel-info > .panel-heading {
+  color: #ffffff;
+  background-color: rgba(70, 22, 107, 1);
+
+}
+
+.highlight-testimonial{
+	font-size: 21px;
+	color: rgba(70, 22, 107, 1);
+}
+
+.client-img{
+	margin-left: -25px;
+	margin-right: -25px;
+}
