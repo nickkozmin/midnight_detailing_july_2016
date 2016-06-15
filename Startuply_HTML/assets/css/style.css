@@ -7171,7 +7171,6 @@ body.collapsed .fixed-menu .navigation-header {
 	width: 270px;
 	padding: 0;
 	text-align: center;
-	background-color: #272727;
 	overflow-x: hidden;
 	overflow-y: auto;
 	direction: rtl;
@@ -7790,10 +7789,6 @@ blockquote {
 
 }
 
-.panel-default > .panel-heading{
-	background-color: rgba(70, 22, 107, 0.7)
-}
-
 
 .panel-info > .panel-heading {
   color: #ffffff;
@@ -7810,3 +7805,16 @@ blockquote {
 	margin-left: -25px;
 	margin-right: -25px;
 }
+
+.comp-pics{
+	width: 912px;
+	height: 601px;
+}
+
+@media (min-width: 168px) and (max-width: 991px){
+	 .comp-pics{
+		 width: 300px;
+		 height: 170px;
+	}
+}
+
