@@ -7817,8 +7817,26 @@ blockquote {
 		 height: 170px;
 	}
 	.comp-pics-1{
-		width: 300px;
-		height: 170px;
+		width: 320px;
+		height: 190px;
+		margin-bottom: -20px;
+	}
+	.features-section{
+		padding-bottom: 0px;
+	}
+}
+@media(min-width: 991px) and (max-width: 1200px){
+	 .comp-pics{
+		 width: 600px;
+		 height: 360px;
+	}
+	.comp-pics-1{
+		width: 620px;
+		height: 400px;
+		margin-bottom: -40px;
+	}
+	.features-section{
+		padding-bottom: 0px;
 	}
 }
 
