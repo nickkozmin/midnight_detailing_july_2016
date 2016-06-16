@@ -5634,7 +5634,7 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 }
 
 .process-section {
-	padding: 20px 0 90px;
+	padding: 20px 0 60px;
 }
 
 .features-section {
@@ -7916,63 +7916,18 @@ blockquote {
 	margin-bottom: -20px;
 }
 
-#img-john{
-	height: 280px;
-	width: 470px;
-}
-
-#img-mary{
-	height: 300px;
-}
-
-#img-mike{
-	height: 300px;
-}
-
-#img-joel{
-	height: 300px;
-}
-
-@media(min-width: 991px) and (max-width: 1200px){
-	#img-john{
-		height: 200px;
-		width: 340px;
-	}
-
-	#img-mary{
-		height: 250px;
-	}
-
-	#img-mike{
-		height: 250px;
-	}
-
-	#img-joel{
-		height: 250px;
-	}
-}
-
-@media (min-width: 168px) and (max-width: 991px){
-	#img-john{
-		height: 200px;
-		width: 270px;
-		padding-top: 20px;
+@media(min-width: 100px) and (max-width: 770px){
+	.testimonial-box{
 		margin: 0 auto;
 	}
+}
 
-	#img-mary{
-		height: 250px;
-		margin: 0 auto;
-	}
+.testimonial-box{
+	max-height: 300px;
+	max-width: 300px;
+}
 
-	#img-mike{
-		height: 250px;
-		margin: 0 auto;
-	}
-
-	#img-joel{
-		height: 250px;
-		margin: 0 auto;
-	}
-
+.black-and-white{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
