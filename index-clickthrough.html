@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Home</title>
+	<meta name="description" content="Advisorstream Splash Page">
+	<meta name="keywords" content="Advisorstream Splash Page">
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Calendly badge widget begin -->
+	<link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://calendly.com/assets/external/widget.js" type="text/javascript"></script>
+	<script type="text/javascript">Calendly.showBadgeWidget({url: 'https://calendly.com/advisor-stream-demo-team', text: 'Book Demo', color: '#5b2883', branding: false});</script>
+	<!-- Calendly badge widget end -->
+
+</head>
+
+<body id="landing-page" class="landing-page">
+	<!-- Preloader -->
+	<div class="preloader-mask">
+		<div class="preloader"><div class="spin base_clr_brd"><div class="clip left"><div class="circle"></div></div><div class="gap"><div class="circle"></div></div><div class="clip right"><div class="circle"></div></div></div></div>
+	</div>
+	<!-- Header -->
+	<header>
+
+		<nav class="navigation navigation-header">
+			<div class="container">
+				<div class="navigation-brand">
+					<div class="brand-logo">
+						<a href="index-clickthrough.html" class="logo"></a><a href="index-clickthrough.html" class="logo logo-alt"></a>
+					</div>
+				</div>
+				<button class="navigation-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navigation-navbar collapsed">
+					<ul class="navigation-bar navigation-bar-left">
+						<li><a href="#hero">Home</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#features">Features</a></li>
+						<li><a href="#Clients">Clients</a></li>
+						<li><a href="#team">Team</a></li>
+					</ul>
+					<ul class="navigation-bar navigation-bar-right">
+						<li class="dropdown" id="login" style="display: none">
+							<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin" aria-expanded="true">Login</a>
+							<div id="innerdropdownform" class="dropdown-menu pull-right wider-dropdown-form">
+								<div id="loginbox" sytle="margin-top:20px" class="mainbox col-md-12">
+									<div class="panel panel-info">
+										<div class="panel-heading">
+											<div class="panel-title">Sign In</div>
+										</div>
+										<div class="panel-body">
+											<div style="display:none" id="login-alert" class="alert alert-danger col-xs-12"></div>
+											<form id="loginform" class="form-horizontal login" role="form" method="post" action="/accoutns/login/">
+												<div class="col-xs-12">
+													<div class="form-group">
+														<label class="control-label" for="id_login">Username</label>
+														<div>
+															<input autofocus="autofocus" class="form-control" id="id_login" maxlength="30"
+																   name="login" placeholder="Username" type="text"/>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="control-label" for="id_password">Password</label>
+														<div>
+															<input class="form-control" id="id_password" name="password" placeholder="Password" type="password">
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="checkbox">
+															<label>
+																<input id="id_remember" name="remember" type="checkbox">
+																<span>Remember Me</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="links" style="float:right; font-size:80%; position: relative; top: -2.8em">
+													<a href="/accounts/password/reset">Forgot Password?</a>
+												</div>
+												<div style="margin-top: 10px;" class="form-group">
+													<div class="col-xs-12">
+														<button class="primaryAction btn splash-btn btn-block btn-success splash-btn-success" type="submit">
+															Sign In
+														</button>
+													</div>
+												</div>
+												<div class="socialaccount_ballot">
+													<ul class="socialaccount_providers" sytle="display:table; margin-left:auto; margin-right:auto; padding-left: 0px">
+														<li style="margin: 1em">
+															<a title="LinkedIn" class="socialaccount_provider linkedin_oauth2 btn btn-block btn-social btn-linkedin splash-btn
+															splash-btn-social" href="/accounts/linkedin_oauth2/login/?process=login">
+																<i class="fa fa-linkedin"></i>LinkedIn
+															</a>
+														</li>
+														<li style="margin: 1em">
+															<a title="Facebook" class="socialaccount_provider facebook btn btn-block btn-social btn-facebook
+															splash-btn splash-btn-social" href="javascript: ">
+																<i class="fa fa-facebook"></i>
+																Facebook
+															</a>
+														</li>
+														<li style="margin: 1em">
+															<a title="Twitter" class="socialaccount_provider twitter btn btn-block btn-social
+															btn-twitter splash-btn splash-btn-social" href="/accounts/twitter/login/?process=login">
+																<i class="fa fa-twitter">
+																</i>
+																Twitter
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="form-group">
+													<div class="col-xs-12 control">
+														<div class="links black-text-forms" style="border-top: 1px solid#888; padding-top: 15px; font-size:85%;">
+															Don't have an account!
+															<a href="/accounts/signup/">Sign Up Here</a>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="featured"><a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-sm btn-outline-color">Book Demo</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div id="hero" class="static-header window-height light-text hero-section clickthrough-version clearfix">
+		<div class="overlay"></div>
+		<div class="heading-block align-center centered-block">
+			<div class="container">
+				<div class="animated" data-animation="fadeIn" data-duartion="500">
+					<h2>We help financial advisors generate new leads and grow their book.</h2>
+					<p class="sub-title">Give us 30 days. We'll get you new leads. </p>
+				</div>
+				<div class="animated" data-animation="fadeInUp" data-duartion="500" data-delay="200">
+					<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline">Book Demo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="publishers" class="clients-section align-center">
+		<div class="container">
+			<ul class="list-inline logos">
+				<h5>Partners and Publishers</h5>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" src="assets/img/logos/Bloomberg_logo.png" alt="Bloomberg" style="width: 155px; height: 35px; margin-bottom: 10px;"/></li>
+				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="200" src="assets/img/logos/business-insider-logo.png" alt="Business-Insider" style="width: 80px; height: 50px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="400" src="assets/img/logos/envestnet-logo.png" alt="Envestnet" style="width: 130px; height: 50px;"/></li>
+				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="600" src="assets/img/logos/Forbes_logo.svg.png" alt="Forbes"
+                         style="width: 90px; height: 38px; padding-bottom: 10px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Investopedia_logo.png" alt="Investopedia" style="width: 140px; height: 30px; margin-bottom: 8px;"/></li>
+				<li><img class="animated" data-animation="fadeInUp" data-duration="500" data-delay="1000" src="assets/img/logos/new_york_times_logo.jpg" alt="New York Times" style="width: 60px; height: 50px;"/></li>
+				<li><img class="animated" data-animation="fadeInDown" data-duration="500" data-delay="800" src="assets/img/logos/Reuters_logo.png" alt="Reuters" style="width: 125px; height: 35px; margin-bottom: 10px;"/></li>
+			</ul>
+		</div>
+	</div>
+
+
+<!-----------------------  CANT USE THESE PHOTOS --  NEED TO GET STOCK IMAGES  -------------------------------------->
+	<section id="testimonials" class="section process-section align-center dark-text">
+		<div class="container">
+			<div class="section-content row">
+				<div class="col-sm-4 pull-right animated" data-duration="500" data-animation="fadeInRight">
+					<img src="assets/img/testimonial-headshots/John.jpg" class="img-responsive pull-right" alt="process 2" style="height: 280px; width: 470px;"/>
+				</div>
+				<div class="col-sm-8 align-left animated" data-duration="500" data-animation="fadeInLeft">
+					<br/><br/>
+					<article>
+						<h5>"I needed more referrals..."<br></h5>
+						<h6> Advisor Stream now automatically asks my clients for new referrals and the impact has been clear.
+							Over the past 6 months I now have <span class="highlight-testimonial"><strong>7 new clients which has led to $50k in profits.</strong></span></h6>
+						<p class="sub-title"><em>-John S., Independent Financial Advisor, Undisclosed Firm</em></p>
+						<br>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline-color">Book Demo</a>
+					</article>
+				</div>
+
+				<hr class="clearfix" />
+
+				<div class="col-sm-4 animated" data-duration="500" data-animation="fadeInLeft">
+					<img src="assets/img/testimonial-headshots/Mary.jpg" class="img-responsive" alt="process 3" style="height: 350px"/>
+				</div>
+				<div class="col-sm-8 align-left animated" data-duration="500" data-animation="fadeInRight">
+					<br/><br/>
+					<article>
+						 <h5>
+							 "I was losing assets and clients..."</h5>
+						 <h6>
+							 In the past I found that I was losing touch with clients and they were leaving for other advisors. AdvisorStream's weekly
+							 updates keeps constant communication with my clients and has positioned me as an expert in the field.
+							 In both 2013 and 2014, <span class="highlight-testimonial"><strong>I have reduced lost assets by 30%.</strong></span>
+						 </h6>
+						<p class="sub-title"><em>-Mary S., Financial Advisor, Undisclosed Firm</em></p>
+						<br>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline-color">Book Demo</a>
+					</article>
+				</div>
+
+				<hr class="clearfix" />
+
+				<div class="col-sm-4 pull-right animated" data-duration="500" data-animation="fadeInRight">
+					<img src="assets/img/testimonial-headshots/Mike.jpg" class="img-responsive pull-right" alt="process 2"/>
+				</div>
+				<div class="col-sm-8 align-left animated" data-duration="500" data-animation="fadeInLeft">
+					<br/><br/>
+					<article>
+						<h5>"I had no time to learn social media marketing..."<br></h5>
+						<h6>"Advisor Stream automatically posts credible articles to my Facebook, Linkedin and Twitter for me every day or week.
+						<span class="highlight-testimonial"><strong>I'm generating 50 new leads a month </strong></span> and spending more time generating business. "</h6>
+						<p class="sub-title"><em>-Mike G., Financial Advisor</em></p>
+						<br>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline-color">Book Demo</a>
+					</article>
+				</div>
+
+				<hr class="clearfix" />
+
+				<div class="col-sm-4 animated" data-duration="500" data-animation="fadeInLeft">
+					<img src="assets/img/testimonial-headshots/Joel.jpg" class="img-responsive" alt="process 3"/>
+				</div>
+				<div class="col-sm-8 align-left animated" data-duration="500" data-animation="fadeInRight">
+					<br/><br/>
+					<article>
+						 <h5>
+							 "Content and articles that I found were always non-compliant...</h5>
+						 <h6>
+							 All AdvisorStream content is licensed and compliant with FINRA and IROC guidlines.    <span class="highlight-testimonial"><strong>I can actually use these articles."</strong></span>
+						 </h6>
+						<p class="sub-title"><em>-Joel Aegor, Compliance Officer</em></p>
+						<br>
+						<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline-color">Book Demo</a>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  
+    <section id="features" class="section features-section align-center inverted">
+        <div class="row">
+            <div class="container">
+            	<div class="section-header">
+                <h2>A <span class="highlight">Powerful</span> Suite of Tools that Gets Results</h2>
+                
+            </div>
+                <div class="col-md-12 section-content">
+                    <div class="featured-tab">
+                        <ul class="list-unstyled">
+                            <li class="active">
+                                <a href="#cbn" data-toggle="tab">
+                                    <div class="tab-info">
+                                        <div class="tab-title">Premium Content Library</div>
+                                    </div>
+                                    <!--<div class="tab-icon"><span class="icon icon-multimedia-20"></span></div>-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#social-media" data-toggle="tab">
+                                    <div class="tab-info">
+                                        <div class="tab-title">Email Marketing</div>
+                                    </div>
+                                    <!--<div class="tab-icon"><span class="icon icon-seo-icons-27"></span></div>-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#opt-in" data-toggle="tab">
+                                    <div class="tab-info">
+                                        <div class="tab-title">Website Integration</div>
+                                    </div>
+                                    <!-- <div class="tab-icon"><span class="icon icon-seo-icons-28"></span></div>-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#brand" data-toggle="tab">
+                                    <div class="tab-info">
+                                        <div class="tab-title">Lead Capture</div>
+                                    </div>
+                                    <!-- <div class="tab-icon"><span class="icon icon-seo-icons-28"></span></div>-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#lead" data-toggle="tab">
+                                    <div class="tab-info">
+                                        <div class="tab-title">Social Media Posting</div>
+                                    </div>
+                                    <!-- <div class="tab-icon"><span class="icon icon-seo-icons-28"></span></div>-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#content" data-toggle="tab">
+                                    
+                                    <!-- <div class="tab-icon"><span class="icon icon-seo-icons-28"></span></div>-->
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane in active" id="cbn">
+                                <img src="assets/img/features/main_page.png" class="comp-pics animated" data-duration="900" data-animation="flip3dInTop" alt="macbook"/>
+                                <h6>Access to unlimited premium, licensed, compliant content from the top publishers in the world. </h6>
+                            </div>
+                            <div class="tab-pane" id="social-media">
+                                <img src="assets/img/features/first_financial.png" class="comp-pics animated" data-duration="900" data-animation="roll3dInLeft" alt="macbook"/>
+                                <h6> Custom branded newsletters that are automatically sent to clients every week. </h6>
+                            </div>
+                            <div class="tab-pane" id="opt-in">
+                                <img src="assets/img/features/Broussard1.png" class="comp-pics animated" data-duration="900" data-animation="fadeInRight" alt="macbook"/>
+                               <h6> Beautiful blog pages on your website that are automatically updated.   </h6>
+                            </div>
+                            <div class="tab-pane" id="brand">
+                                <img src="assets/img/features/doessier.png" class="comp-pics animated" data-duration="900" data-animation="flip3dInTop" alt="macbook"/>
+                                <h6> Automatically capture new leads with custom opt in and analytics.  </h6>
+                            </div>
+                            <div class="tab-pane" id="lead">
+                                <img src="assets/img/features/linked_in.png" class="comp-pics-1 animated" data-duration="900" data-animation="roll3dInLeft" alt="macbook"/>
+                                <h6> Que up articles and AdvisorStream will automatically post to your LinkedIn, Twitter, or Facebook.  </h6>
+                            </div>
+                            <div class="tab-pane" id="content">
+                                <img src="assets/img/features/rich_features_3.png" class="comp-pics animated" data-duration="900" data-animation="fadeInRight" alt="macbook"/>
+                                <h6> Finra and IROC complient content</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Clients" class="section features-list-section align-center dark-text">
+		<div class="container" style="align-content: center">
+            <div class="section-header">
+                <h2>You are in <span class="highlight">Great</span> Company</h2>
+                <hr style="margin-bottom: -30px;">
+            </div>
+
+			<div class="clearfix animated" data-duration="500" data-animation="fadeInRight">
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+						<img src="assets/img/Clients/ALLSTATE.png" alt="Allstate" style="width: 70px; height: 40px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+						<img src="assets/img/Clients/ameriprise-finanical.png" alt="Emeriprise" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+                <div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/Scotia.jpg" alt="Scoita" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+                <div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/SEI.png" alt="SEI" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/TD.png" alt="TD" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/New-York-Life.png" alt="New York Life" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/Common-Wealth-Financial.jpg" alt="Commonwealth" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/National-Bank.png" alt="National-Bank" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+			</div>
+			<div class="clearfix animated" data-duration="500" data-animation="fadeInLeft">
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/Mandeville-Private-Client.png" alt="Mandeville" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/freedom-55-financial.png" alt="Freedom55" style="width: 70px; height: 70px; margin-top: -10px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/mass-mutual.png" alt="Mass Mutual" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/Horizon-Financial.png" alt="Horizon" style="width: 85px; height: 40px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/IndustrialAliance.png" alt="Industrial Alliance" style="width: 75px; height: 45px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/Primerica.png" alt="Primerica" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/ipl.png" alt="IPL" style="width: 100px; height: 17px; margin-top: 15px; "/>
+					</article>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 client-img">
+					<article class="align-center">
+                        <img src="assets/img/Clients/United-Advisors.png" alt="United" style="width: 50px; height: 50px;"/>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="guarantee" class="long-block light-text guarantee-section">
+		<div class="container">
+			<div class="col-md-9 col-lg-9">
+				<article class="pull-left">
+					<h3> Give us 30 days. We'll get you new leads</h3>
+					<p class="thin">One of our experts will contact you within 48 hours.  We do not sell your information.  We will only send you relevant information for your demo.</p>
+				</article>
+			</div>
+
+            <div class="col-md-3 col-lg-3">
+				<a onClick="Calendly.showPopupWidget('https://calendly.com/advisor-stream-demo-team'); return false;" class="btn btn-outline" style="margin-top: 7px;">Book Demo</a>
+            </div>
+		</div>
+	</section>
+
+<!--------------------------------------- NEED TO FILL IN TEAM CONTENT -------------------------------------------------->
+    <section id="team" class="section team-section align-center dark-text">
+        <div class="container">
+            <div class="section-header">
+                <h2>Created by <span class="highlight">Market Experts </span> in the Financial Services Space </h2>
+                <p class="sub-header">
+                    "Advisors need great marketing tools to break through the noise..."
+                    
+                </p>
+            </div>
+
+            <div class="section-content">
+                <div class="row>">
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInDown" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/team/kevin2.jpg" alt="Kevin">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+												<p>15 years of financial industry experience.
+													Helped launched Clientinsights.ca with Dan Richards.
+													Head of project management for Richardson Partners Financial.
+													</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Kevin Mulhern</h5>
+                            <p class="position">CEO, Partner - Richardson GMP</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInUp" data-delay="200" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/team/Martin_0.jpg" alt="Martin">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>15 years software design and development, including 7 years in financial services.
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Martin Hill</h5>
+                            <p class="position">CTO, VP, Automated Marketing - TD Securities</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInDown" data-delay="400" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/team/Bryan.jpg" alt="">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>15- Year NHL Career, Mackie Research Capital.  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Bryan Muir</h5>
+                            <p class="position">Head of Sales, Mackie Research Capital, 15 Year Career as a Professional Hockey Player</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInUp" data-delay="600" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/team/Derek.png" alt="">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>Derek Started and sold Red Flag Deals, the largest coupon site in Canada. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Derek Szeto</h5>
+                            <p class="position">Algorithm Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+          <!--       <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInDown" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/people/team-1.jpg" alt="">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>Mike has worked with CARE USA, for 12 years holding positions such as Deputy Country Director to Director of Programs and Information Systems.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Christine</h5>
+                            <p class="position">CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInUp" data-delay="200" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/team/Bryan.jpg" alt="Bryan">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>Mike has worked with CARE USA, for 12 years holding positions such as Deputy Country Director to Director of Programs and Information Systems.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Bryan Muir</h5>
+                            <p class="position">Sales, Client Success</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInDown" data-delay="400" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/people/team-3.jpg" alt="">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>Ellen has over 13 years of experience in development projects as a senior consultant and project manager in the areas of project management, fund and board development, strategic & financial planning, monitoring & evaluation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Investor</h5>
+                            <p class="position">Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 animated" data-animation="fadeInUp" data-delay="600" data-duration="500">
+                        <div class="team-member">
+                            <div class="photo-wrapper">
+                                <div class="overlay-wrapper">
+                                    <img src="assets/img/people/team-4.jpg" alt="">
+                                    <div class="overlay-content">
+                                        <div class="text-wrapper">
+                                            <div class="text-container">
+                                                <p>Mike has worked with CARE USA for 12 years.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="name">Investor</h5>
+                            <p class="position">Developer</p>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+	<footer id="footer" class="footer light-text">
+		<div class="container">
+			<div class="footer-content row">
+				<div class="col-sm-4 col-xs-12">
+					<div class="logo-wrapper">
+						<img width="130" height="31" src="assets/img/logos/AS_logo.png" alt="logo" />
+					</div>
+					<p>We help Independent Financial Advisors generate new leads, grow assets and save money by providing them with awesome tools.</p>
+				</div>
+				<div class="col-sm-5 social-wrap col-xs-12">
+					<strong class="heading">Social Networks</strong>
+					<ul class="list-inline socials">
+						<li><a href="https://www.facebook.com/advisorstream"><span class="icon icon-socialmedia-08"></span></a></li>
+                        <li><a href="https://twitter.com/advisorstream"><span class="icon icon-socialmedia-07"></span></a></li>
+                        <li><a href="https://www.linkedin.com/company/advisorstream"><span class="icon icon-socialmedia-05"></span></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<strong class="heading">Our Contacts</strong>
+					<ul class="list-unstyled">
+						<li><span class="icon icon-chat-messages-14"></span><a href="mailto:inquiries@advisorstream.com">inquiries@advisorstream.com</a></li>
+						<li><span class="icon icon-seo-icons-34"></span>1412 Broadway, 22nd Floor. <br>New York, NY 10018</li>
+                        <li><span class="icon icon-seo-icons-34"></span>1 Yonge St. Toronto, Canada</li>
+						<li><span class="icon icon-seo-icons-17"></span>416-847-4701</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">Advisor Stream INC. All rights reserved.</div>
+	</footer>
+
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js?ver=1"></script>
+	<![endif]-->
+	<!--[if (gte IE 9) | (!IE)]><!-->
+		<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script>
+	<!--<![endif]-->
+
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="assets/js/toastr.min.js"></script>
+	<script type="text/javascript" src="assets/js/startuply.js"></script>
+</body>
+</html>
