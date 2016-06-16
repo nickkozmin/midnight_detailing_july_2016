@@ -7915,3 +7915,64 @@ blockquote {
 .client-header{
 	margin-bottom: -20px;
 }
+
+#img-john{
+	height: 280px;
+	width: 470px;
+}
+
+#img-mary{
+	height: 300px;
+}
+
+#img-mike{
+	height: 300px;
+}
+
+#img-joel{
+	height: 300px;
+}
+
+@media(min-width: 991px) and (max-width: 1200px){
+	#img-john{
+		height: 200px;
+		width: 340px;
+	}
+
+	#img-mary{
+		height: 250px;
+	}
+
+	#img-mike{
+		height: 250px;
+	}
+
+	#img-joel{
+		height: 250px;
+	}
+}
+
+@media (min-width: 168px) and (max-width: 991px){
+	#img-john{
+		height: 200px;
+		width: 270px;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+
+	#img-mary{
+		height: 250px;
+		margin: 0 auto;
+	}
+
+	#img-mike{
+		height: 250px;
+		margin: 0 auto;
+	}
+
+	#img-joel{
+		height: 250px;
+		margin: 0 auto;
+	}
+
+}
