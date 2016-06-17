@@ -7931,3 +7931,7 @@ blockquote {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 }
+
+.logos-padding{
+	margin-left: 100px;
+}
