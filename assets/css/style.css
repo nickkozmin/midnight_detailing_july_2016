@@ -6125,7 +6125,7 @@ body:not(.always-mobile) .navigation-header .navigation-brand .brand-logo {
 @media (min-width: 1200px) {
 
 .featured-tab {
-	margin-top: 115px;
+	margin-top: 55px;
 }
 
 .featured-tab li > a {
