@@ -419,7 +419,7 @@ input[type=password],
 .fixed-menu .navigation-header.white-dropdown .navigation-bar.navigation-bar-left > li.active:not(.featured) > a,
 .navigation-header.white-header .btn.btn-outline,
 .form-register.form-register-small .form-control {
-	border-color: #5b2883;
+	border-color: #b29159;
 }
 
 .base-clr-bg,
@@ -506,7 +506,7 @@ input[type=submit]:not(.default).btn-outline-color.pressed,
 .color-landing-page .newsletter-section,
 .color-landing-page .feedback-section,
 .color-landing-page .footer {
-	background-color: #5b2883;
+	background-color: #333;
 }
 
 .base-clr-txt,
@@ -611,17 +611,17 @@ input[type=submit]:not(.default).btn-no-border.pressed,
 .package-column.featured > .package-detail .btn.btn-outline-color:hover,
 .package-column:hover > .package-detail .btn.btn-outline-color:focus,
 .package-column.featured > .package-detail .btn.btn-outline-color:focus {
-	color: #5b2883
+	color: #b29159
 }
 
 ::selection {
 	color: #ffffff;
-	background-color: #5b2883;
+	background-color: #b29159;
 }
 
 ::-moz-selection {
 	color: #ffffff;
-	background-color: #5b2883;
+	background-color: #b29159;
 }
 
 .bg-low-poly,
@@ -805,7 +805,7 @@ blockquote:after {
 }
 
 .style-switcher .template-set-color .color.blue {
-	background-color: #5b2883;
+	background-color: #b29159;
 }
 
 .style-switcher .template-set-color .color.berry {
@@ -5471,7 +5471,7 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 }
 
 .static-header.clickthrough-version .overlay {
-	background: rgba(70, 22, 107, 0.7);
+	background: rgba(8, 8, 8, 0.72);
 
 }
 
@@ -7792,7 +7792,7 @@ blockquote {
 
 .highlight-testimonial{
 	font-size: 21px;
-	color: rgba(70, 22, 107, 1);
+	color: #75603b
 }
 
 .client-img{
