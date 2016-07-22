@@ -4426,8 +4426,9 @@ td.cart-list-item-price {
 	-moz-background-size: contain;
 	background-size: contain;
 	display: block;
-	height: 30px;
-	background-image: url("../img/logos/AS_logo.png");
+	height: 70px;
+	margin-top: -15px;
+	background-image: url("../img/logos/header.png");
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 30px;
@@ -4435,7 +4436,7 @@ td.cart-list-item-price {
 
 .navigation-header .navigation-brand .brand-logo .logo.logo-alt {
 	display: none;
-	background-image: url("../img/logos/AS_logo.png");
+	background-image: url("../img/logos/header.png");
 }
 
 .navigation-header .navigation-brand .brand-logo h4 {
