@@ -326,78 +326,9 @@ Startuply = {
             doneHandler,
             failHandler;
 
-        mailchimpHandler = function (event) {
-            event.preventDefault();
 
-            var $firstNameField = $(this).find('[name=FNAME]'),
-                $lastNameField = $(this).find('[name=LNAME]'),
-                $fullnameField = $(this).find('[name=FULLNAME]'),
-                $emailField = $(this).find('[name=EMAIL]'),
-                $phoneField = $(this).find('[name=PHONE]'),
-                $responseBlock = $(this).find('.response'),
-                fullname, fname, lname, email, phone, data = {};
 
-            if ( $fullnameField.length && $fullnameField.val().length ) {
-                fullname = $fullnameField.val().split(' ');
-                fname = fullname[0];
 
-                if ( fullname.length > 1 ) lname = fullname[1];
-            }
-
-            if ( $firstNameField.length && $firstNameField.val().length ) fname = $firstNameField.val();
-            if ( $lastNameField.length && $lastNameField.val().length ) lname = $lastNameField.val();
-            if ( fname ) data.fname = escape(fname);
-            if ( lname ) data.lname = escape(lname);
-
-            if ( $emailField.length && $emailField.val().length ) {
-                email = $emailField.val();
-                data.email = escape(email);
-            }
-
-            if ( $phoneField.length && $phoneField.val().length ) {
-                phone = $phoneField.val();
-                data.phone = escape(phone);
-            }
-
-            if ( typeof toastr == 'undefined' ) $responseBlock.html('<span class="notice_message">Adding email address...</span>');
-
-            data.ajax = true;
-
-            $.ajax({
-                url: '/assets/mailchimp/inc/store-address.php',
-                data: data,
-
-                success: function(msg) {
-                    if ( msg.indexOf('Success') != -1 ) {
-                        if ( typeof toastr != 'undefined' ) toastr.success('Success! You are now subscribed to our newsletter!');
-                        else if ( $responseBlock.length ) $responseBlock.html('<span class="success-message">Success! You are now subscribed to our newsletter!</span>');
-
-                    } else {
-                        if ( typeof toastr != 'undefined' ) toastr.error(msg);
-                        else if ( $responseBlock.length ) $responseBlock.html('<span class="error-message">' + msg + '</span>');
-
-                    }
-                }
-            });
-        }
-
-        submitHandler = function (event) {
-            event.preventDefault();
-
-            var form = this;
-
-            $.ajax({
-                url: form.action,
-                type: 'POST',
-                data: $(form).serialize()
-            }).done(function(msg) {
-                doneHandler(msg, form);
-
-            }).fail(function() {
-                failHandler(form);
-
-            });
-        }
 
         validateOptions = {
             rules: {
@@ -439,20 +370,6 @@ Startuply = {
             }
         };
 
-        doneHandler = function (msg, form) {
-            if( msg === 'ok' ) {
-                form.reset();
-
-                if ( typeof toastr != 'undefined' ) toastr.success('Success');
-                else alert('Success');
-
-            } else {
-                if ( typeof toastr != 'undefined' ) toastr.error('An error occured. Please try again later.');
-                else alert('An error occured. Please try again later.');
-
-                _this.log( 'Form message', msg );
-            }
-        };
 
         failHandler = function () {
             if ( typeof toastr != 'undefined' ) toastr.error('An error occured. Please try again later.');
@@ -1105,8 +1022,7 @@ Startuply = {
 
         if ( this.options.smoothScroll ) this.smoothScrollInit();
 
-        if ( this.options.ajaxedForm ) this.formInit();
-
+       
         this.windowHeightBlock();
 
         this.centeredBlock();
