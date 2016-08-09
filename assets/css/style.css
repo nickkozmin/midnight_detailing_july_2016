@@ -5342,7 +5342,7 @@ body.always-mobile .fixed-menu .navigation-header.white-dropdown .navigation-bar
 	bottom: 0;
 	display: block;
 	content: "";
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0);
 	z-index: 0;
 }
 
@@ -6621,7 +6621,7 @@ h6 {
 }
 
 .heading {
-	font-size: 12.8px;
+	font-size: 18px;
 }
 
 .sub-title,
