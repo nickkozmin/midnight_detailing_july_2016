@@ -141,23 +141,25 @@
 							<h3 class="editContent highlight">What Area Are You In?</h3>
 							<p class="editContent highlight"> We only use your address to determine the price when we are in the area. </p>
 						</div>
-						<div class="form-group col-sm-12">
-							
-							<select class=" form-control required" data-type="input-textbox" name="cars" placeholder="Vehicle">
-							  <option value="" disabled="disabled" selected="selected">Please Select a Vehicle Size</option>
-							  <option value="volvo">2-Door Car</option>
-							  <option value="saab">4-Door Car</option>
-							  <option value="fiat">Minivan</option>
-							  <option value="audi">SUV</option>
-							  <option value="audi">Truck</option>
-							</select>
-
-							
-						</div>
+				
 						<div class="form-group col-sm-12">
 							
 							<input type="text" class=" form-control required" data-type="input-textbox" id="address" name="address" size="10" data-validation="required" placeholder="Address"  /> 
 						</div>
+						<div class="form-group col-sm-12">
+							
+							<select class=" form-control required" data-type="input-textbox" name="cars" placeholder="Vehicle">
+							  <option  disabled="disabled" selected="selected">Please Select a Vehicle Size</option>
+							  <option name="2-door" value="2-Door">2-Door Car</option>
+							  <option value="4-Door">4-Door Car</option>
+							  <option value="Minivan">Minivan</option>
+							  <option value="SUV">SUV</option>
+							  <option value="Truck">Truck</option>
+							</select>
+
+							
+						</div>
+					
 
 						
 
@@ -166,6 +168,7 @@
 
 <script>
 $('#address').geocomplete();
+
 </script>
 
 		
