@@ -480,7 +480,7 @@ input[type=submit]:not(.default).btn-outline-color.pressed,
 .long-block,
 .featured-tab li.active > a .tab-info,
 .featured-tab li.active > a .tab-icon,
-.package-column:hover,
+
 .package-column.featured,
 .post-thumbnail a:after,
 .blog-tags .tags-item a:hover,
@@ -607,9 +607,9 @@ input[type=submit]:not(.default).btn-no-border.pressed,
 .color-landing-page .features-section .fa,
 .color-landing-page .guarantee-section .icon,
 .color-landing-page .features-section .icon,
-.package-column:hover > .package-detail .btn.btn-outline-color:hover,
+
 .package-column.featured > .package-detail .btn.btn-outline-color:hover,
-.package-column:hover > .package-detail .btn.btn-outline-color:focus,
+
 .package-column.featured > .package-detail .btn.btn-outline-color:focus {
 	color: #b29159
 }
@@ -1186,7 +1186,6 @@ input[type=submit]:not(.default).btn-solid.btn-sm {
 button:not(.default).btn-outline,
 input[type=button]:not(.default).btn-outline,
 input[type=submit]:not(.default).btn-outline,
-.package-column:hover > .package-detail .btn.btn-outline-color,
 .package-column.featured > .package-detail .btn.btn-outline-color {
 	border-color: #ffffff;
 	background-color: transparent;
@@ -1209,9 +1208,9 @@ input[type=submit]:not(.default).btn-outline.hovered,
 button:not(.default).btn-outline.pressed,
 input[type=button]:not(.default).btn-outline.pressed,
 input[type=submit]:not(.default).btn-outline.pressed,
-.package-column:hover > .package-detail .btn.btn-outline-color:hover,
+
 .package-column.featured > .package-detail .btn.btn-outline-color:hover,
-.package-column:hover > .package-detail .btn.btn-outline-color:focus,
+
 .package-column.featured > .package-detail .btn.btn-outline-color:focus {
 	background-color: #ffffff;
 	border-color: #ffffff;
@@ -2589,26 +2588,17 @@ input[type=checkbox]:focus {
 	border: 1px solid #a4a4a4;
 }
 
-.package-column:hover > .package-price,
+
 .package-column.featured > .package-price {
-	background-color: rgba(71, 72, 76, 0.2);
+	background-color: #f7f7f7;
 }
 
 .package-column:hover > .package-detail ul li,
 .package-column.featured > .package-detail ul li {
-	border-color: rgba(255, 255, 255, 0.3);
+	border-color: #f7f7f7;
 }
 
-.package-column:hover > .package-price .price,
-.package-column.featured > .package-price .price,
-.package-column:hover > .package-price .period,
-.package-column.featured > .package-price .period,
-.package-column:hover > .package-title,
-.package-column.featured > .package-title,
-.package-column:hover > .package-detail ul li,
-.package-column.featured > .package-detail ul li {
-	color: #ffffff;
-}
+
 
 /* Media queries */
 
