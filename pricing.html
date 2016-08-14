@@ -24,11 +24,11 @@
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 
-		<link rel="stylesheet" href="./compiled/flipclock.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/flipclock.css">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-		<script src="./compiled/flipclock.js"></script>
+		<script src="assets/js/flipclock.min.js"></script>
 <!-- 
 	<link rel="stylesheet" type="text/css" href="assets/css/builder-fix.css" /> -->
 
@@ -59,19 +59,26 @@
 	
 	<section class="section product-section align-center dark-text animated" data-animation="fadeInUp" data-duration="500">
 			<div class="container">
+			<div class="my-clock" style="position: float; top: 0px; left: 20px;"></div>
 				<div class="section-header">
-					<h2 class="editContent">Service <span class="highlight">Packages</span></h2>
-					<a href="./register.html" class="btn btn-outline-color">Claim Your 40% Off </a>
+					<h2 class="editContent">Limited Time Area Promotional Service <span class="highlight">Packages</span></h2>
+					
+					<a href="./promo.html" class="btn btn-outline-color">Claim Your 40% Off </a>
 					<div class="clock" style="margin:2em;"></div>
 <div class="message"></div>
 				</div>
-<div class="clock"></div>
+
+
+
 
 <script type="text/javascript">
-	var clock = $('.your-clock').FlipClock(3000, {
-		clockFace: 'MinuteCounter'
+	var clock = $('.my-clock').FlipClock(6000, {
+		// clockFace: 'MinuteCounter', 
+		countdown: 'true'
 	});
 </script>
+
+
 
 
 				<div class="section-content row">
@@ -96,7 +103,7 @@
 									<li class="editContent"><strong>Eliminate</strong> Odors</li>
 									<li class="editContent"><strong>Clean</strong> Windows and Mirrors</li>
 								</ul>
-								<a href="#" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
+								<a href="./promo.html" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
 							</div>
 						</div>
 					</div>
@@ -120,7 +127,7 @@
 									<li class="editContent"><strong>Dress </strong> Tires </li>
 									<li class="editContent"><strong>Clean</strong> Windows and Mirrors</li>
 								</ul>
-								<a href="#" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
+								<a href="./promo.html" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
 							</div>
 						</div>
 					</div>
@@ -143,7 +150,7 @@
 									<li class="editContent"><strong>High-Speed </strong>Polishing </li>
 								
 								</ul>
-								<a href="#" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
+								<a href="./promo.html" class="btn btn-outline-color btn-block editContent">Claim Your 40% Off </a>
 							</div>
 						</div>
 					</div>
