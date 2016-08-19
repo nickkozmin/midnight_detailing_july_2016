@@ -21,6 +21,14 @@
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 
+
+<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js?ver=1"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="assets/js/jquery.geocomplete.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -52,50 +60,14 @@
 
 </head>
 
-<body id="register-page" class="register-page">
-	<!-- Preloader -->
-	<div class="preloader-mask">
-		<div class="preloader"><div class="spin base_clr_brd"><div class="clip left"><div class="circle"></div></div><div class="gap"><div class="circle"></div></div><div class="clip right"><div class="circle"></div></div></div></div>
-	</div>
-
-	<!doctype html>
-<html lang="en">
-<head>
-	<title>Home</title>
-	<meta charset="utf-8">
-	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-
-	<meta name="description" content="Startups template">
-	<meta name="keywords" content="Startups template">
-
-	<link rel="shortcut icon" href="assets/img/favicon.ico">
 
 
-
-	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
-	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
-
-	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-	<!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="assets/css/builder-fix.css" />
-</head>
 
 <body id="landing-page" class="landing-page">
 	<div id="page" class="page">
 
 		<div class="bg bg1 window-height light-text form-section lead-generation2 clearfix">
 			<div class="container centered-block">
-				
 
 				<!-- <div class="col-sm-6 align-left" style="padding-top: 50px;">
 
@@ -139,7 +111,7 @@
 						 <div class="form-all"> 
 						 	<ul class="form-section page-section">
 						<div class="col-sm-12">
-							<h3 class="editContent highlight">What Area Are You In?</h3>
+							<h3 class="editContent highlight">Get A Price</h3>
 							<p class="editContent highlight"> We only use your address to determine the price when we are in the area. </p>
 						</div>
 				
@@ -148,7 +120,7 @@
 							<input type="text" class=" form-control required" data-type="input-textbox" id="address" name="address" size="10" data-validation="required" placeholder="Address"  /> 
 						</div>
 						<div class="form-group col-sm-12">
-							
+							<p class="editContent highlight"> Tell us about your car </p>
 							<select class=" form-control required" data-type="input-textbox" name="cars" placeholder="Vehicle">
 							  <option  disabled="disabled" selected="selected">Please Select a Vehicle Size</option>
 							  <option name="2-door" value="2-Door">2-Door Car</option>
@@ -158,8 +130,11 @@
 							  <option value="Truck">Truck</option>
 							</select>
 
-							
+							<p class="editContent highlight"> When would you like us to come? </p>
 						</div>
+						<div class="form-group col-sm-12">
+						<p>Date: <input type="text" id="datepicker"></p>
+					</div>
 
 						<div class="form-group col-sm-12">
 							
@@ -167,15 +142,17 @@
 						</div>
 					
 
-						
-
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
-
 <script>
 $('#address').geocomplete();
 
 </script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+
 
 		
 <!-- 						<div class="form-group col-sm-12">

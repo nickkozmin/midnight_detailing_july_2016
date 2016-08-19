@@ -15,6 +15,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/custom-animations.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/lib/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery.timepicker.css" />
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css"
+    rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+      
 
 	<!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.js"></script>
@@ -95,7 +100,6 @@
 
 		<div class="bg bg1 window-height light-text form-section lead-generation2 clearfix">
 			<div class="container centered-block">
-				
 
 				<!-- <div class="col-sm-6 align-left" style="padding-top: 50px;">
 
@@ -139,16 +143,16 @@
 						 <div class="form-all"> 
 						 	<ul class="form-section page-section">
 						<div class="col-sm-12">
-							<h3 class="editContent highlight">What Area Are You In?</h3>
-							<p class="editContent highlight"> We only use your address to determine the price when we are in the area. </p>
+							<h3 class="editContent highlight">Get A Price</h3>
+							
 						</div>
 				
 						<div class="form-group col-sm-12">
-							
+							<p class="editContent highlight"> Where do we need to be? </p>
 							<input type="text" class=" form-control required" data-type="input-textbox" id="address" name="address" size="10" data-validation="required" placeholder="Address"  /> 
 						</div>
 						<div class="form-group col-sm-12">
-							
+							<p class="editContent highlight">Tell us about your car </p>
 							<select class=" form-control required" data-type="input-textbox" name="cars" placeholder="Vehicle">
 							  <option  disabled="disabled" selected="selected">Please Select a Vehicle Size</option>
 							  <option name="2-door" value="2-Door">2-Door Car</option>
@@ -161,21 +165,24 @@
 							
 						</div>
 
+
+						<div class="form-group col-sm-12">
+							<p class="editContent highlight"> When would you like us to come? </p>
+							<input type="text" name="date" data-validation="required" class="form-control required" id="datepicker" placeholder="Date">
+						</div>
 						<div class="form-group col-sm-12">
 							
-							<input type="text" class=" form-control required" data-type="input-textbox" id="phone" name="phone" size="10" data-validation="number" data-validation="length" placeholder="Phone Number"  /> 
+							<input type="text" name="time" data-validation="required" class="form-control required" placeholder="Time "id="time">
+						</div>
+						<div class="form-group col-sm-12">
+							
+							<input type="text" class=" form-control required" data-type="input-textbox" id="phone" name="phone" maxlength="10" size="10" data-validation="number" data-validation-length="min10" placeholder="Phone Number"  /> 
 						</div>
 					
 
 						
 
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
 
-<script>
-$('#address').geocomplete();
-
-</script>
 
 		
 <!-- 						<div class="form-group col-sm-12">
@@ -189,7 +196,7 @@ $('#address').geocomplete();
 						</div> -->
 
 						<div class="form-group col-sm-12">
-							<input type="submit" value="View Prices" id="input_10" class="btn btn-lg btn-solid btn-block">
+							<input type="submit" value="Get A Price" id="input_10" class="btn btn-lg btn-solid btn-block">
 						</div>
 							
 
@@ -203,15 +210,9 @@ $('#address').geocomplete();
 	</div><!-- /#page -->
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js">
 
-</script>
-<link href="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css"
-    rel="stylesheet" type="text/css" />
-<script> 
-$.validate();
-</script>
+
+
 
 <!-- 
  <form class="jotform-form" action="https://submit.jotform.us/submit/62025549780156/" method="post" name="form_62025549780156" id="62025549780156" accept-charset="utf-8"> 
@@ -242,7 +243,7 @@ $.validate();
 
  						<script type="text/javascript"> document.getElementById("si" + "mple" + "_spc").value = "62025549780156-62025549780156"; </script>
 </form> -->
-<script type="text/javascript">JotForm.ownerView=true;</script>
+
 
 
 
@@ -272,9 +273,41 @@ $.validate();
 	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.timepicker.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
 	 <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script> 
+	<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+
+    
+    
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script> 
+	$.validate();
+
+
+	$('#address').geocomplete();
+
+  	$( function() {
+    $( "#datepicker" ).datepicker(
+    	{minDate: 0, 
+    		maxDate: "30D"}
+    	);
+  	} );
+
+  	$('#time').timepicker({ 
+  		'scrollDefault': 'now',
+  		'minTime': '8:00am',
+  		'maxTime': '7:00pm'
+  	 });
+	</script>
+
+ 
+
 	
 	 <script type="text/javascript" src="assets/js/startuply.js"></script>
 </body>
