@@ -1,1 +1,1 @@
-<?php include_once("index-clickthrough.html"); ?>
+<?php include_once("indexinterior.html"); ?>
